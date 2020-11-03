@@ -1,0 +1,8 @@
+.team-member {
+    .team-member-photo {position:relative;width:200px;height:200px;margin:0 auto;background:var(--primary-color);border-radius:100%;overflow:hidden;//filter:grayscale(0.5);
+        img {position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;/* mix-blend-mode:multiply; */}
+    }
+    .team-member-name {font-size:1.125rem;}
+    .team-member-role {font-weight:400;/* color:var(--primary-color); */opacity:0.5;}
+    .team-member-kids {font-size:0.75rem;}
+}

@@ -1,0 +1,23 @@
+# JEKYLL
+exclude: [".gitignore", "Gruntfile.js", ".travis.yml", "fonts", "less", "presskit", "Makefile", "VERSION", "LICENSE", "README.md", "icon.png", "node_modules", "_site"]
+
+destination: ./_site
+
+# SITE TITLE
+title: Gamboozeeno
+
+# URLS
+host: 0.0.0.0
+port: 4100
+baseurl: /
+url: http://luiscarmona.pt/
+
+# ASSETS PATHS
+img_url: assets/img/
+js_url: assets/js/
+css_url: assets/css/
+less_url: assets/less/
+fonts_url: assets/font/
+docs_url: assets/docs/
+
+permalink: pretty

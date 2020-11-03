@@ -1,0 +1,31 @@
+$text-color: #333333;
+$primary-color: #AB0536;
+$primary-color-rgb: 171,5,54;
+$secondary-color: #AB0536;
+
+:root {
+    --logo-height:40px;
+}
+
+:root {
+    --dark-color: #333333;
+    --text-color: #333333;
+    --text-color-rgb: 55,55,55;
+    --primary-color: #7e57c2;
+    --primary-color-rgb: 171,5,54;
+    --secondary-color: #AB0536;
+    --site-bg-color:#FFFFFF;
+    --site-bg-color-rgb:255,255,255;
+    --special-font:"",serif;
+}
+
+// :root {
+//     --primary-color: #607766;
+//     --primary-color-rgb: 171,5,54;
+//     --secondary-color: #f37861;
+//     --site-bg-color:#fcd8c2;
+//     --site-bg-color-rgb:252,216,194;
+// }
+
+
+$fa-font-path:        "../webfonts";

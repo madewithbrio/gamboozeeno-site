@@ -1,0 +1,42 @@
+<header id="header" class="[ my-5 ]">
+    <div class="[ container-xl py-3 ]">
+        <div class="[ row  ]">
+            <div class="[ col-xl-3 ]">
+                <h1 class="[ mb-0 ] logo">
+                    <a href="/">
+                        <img src="assets/img/logo-01.png" align="{{ site.title }}">
+                    </a>
+                </h1>
+            </div>
+            <div class="[ col-xl-6 ]">
+                <nav class="[  ] menu">
+                    <ul class="[ nav ]">
+                        {% for link in site.data.menu %}
+                        <li class="[ nav-item ]">
+                            <a href="{{ link.url }}" class="[ nav-link ] {{ link.title | slugify: "pretty" }}">
+                                <span>{{ link.title }}</span>
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+            <div class="[ col-xl-3 ]">
+                <nav class="[ float-right ] menu">
+                    <ul class="[ nav ]">
+                        <li class="[ nav-item ] coming-soon">
+                            <a href="/" class="[ nav-link ]">
+                                <span>Experimente</span>
+                            </a>
+                        </li>
+                        <li class="[ nav-item ] coming-soon">
+                            <a href="/frontoffice" class="[ nav-link ] login">
+                                <span>Login</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,244 @@
+---
+layout: default
+title: 
+description: ""
+base_path: ./
+id: homepage
+---
+
+<div class="[  ] main homepage">
+    <section class="[ _py-5 _my-4 text-center ] section-hero">
+        <img src="assets/img/hero-07.png" alt="">
+        <div class="[ mt-5 ] pitch-two">Poupe o tempo da sua equipa e dos pais para investir no que mais interessa: as crianças.</div>
+    </section>
+    <section class="[ container-xl _my-5 ] section-major-functionalities">
+        <div class="[ row ]">
+            <div class="[ col-xl-6 mb-5 ]">
+                <div class="major-functionality">
+                    <h3 class="[  ] title">Uma ferramenta<br>de comunicação</h3>
+                    <div class="[ mb-2 ] text">Claro que o WhatsApp é prático mas pode ser caótico. E o direito à <strong>privacidade</strong> das crianças é fundamental. Crie linhas de comunicação que estão sob o controlo de cada um dos pais e poupam tempo a todos.</div>
+                    {% comment %}
+                    <button class="[ btn btn-primary ]">Conheça os murais</button>
+                    {% endcomment %}
+                </div>
+            </div>
+            <div class="[ col-xl-6 mb-5 ]">
+                <div class="major-functionality">
+                    <h3 class="[  ] title">Recados, registos<br>e avaliações</h3>
+                    <div class="[ mb-2 ] text">E quando tem de marcar uma actividade fora da creche? Pff... sabemos bem como é. Felizmente temos integradas as autorizações dos pais e pagamentos extra. E tantas cosias mais!</div>
+                    {% comment %}
+                    <button class="[ btn btn-primary ]">Veja exemplos</button>
+                    {% endcomment %}
+                </div>
+            </div>
+            <div class="[ col-xl-6 mb-5 ]">
+                <div class="major-functionality">
+                    <h3 class="[  ] title">Faturação automática 100% integrada</h3>
+                    <div class="[ mb-2 ] text">Sabe aquelas horas infindáveis a consultar a conta bancária e a emitir faturas? Esqueça. Connosco tem tudo <strong>automatizado</strong>, até aqueles custos pontuais chatíssimos.</div>
+                    {% comment %}
+                    <button class="[ btn btn-primary ]">Saiba como</button>
+                    {% endcomment %}
+                </div>
+            </div>
+            <div class="[ col-xl-6 mb-5 ]">
+                <div class="major-functionality">
+                    <h3 class="[  ] title">Microsite<br>da escola</h3>
+                    <div class="[ mb-2 ] text">Manter o seu site atualizado é sempre um pincel, verdade? Conquiste os pais num site onde cria laços entre potenciais clientes e a sua equipa.</div>
+                    {% comment %}
+                    <button class="[ btn btn-primary ]">Tantas funcionalidades</button>
+                    {% endcomment %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="[ _py-5 _my-5 ] section-issues">
+        <div id="exemplos" class="section-anchor"></div>
+        <div class="[ container-xl ]">
+            <div class="[ mb-5 ] section-header">
+                <h2 class="[  ] section-title">Em que podemos ajudar?</h2>
+                <div class="[ text-center ] pitch">A Gamboozeeno oferece soluções para alguns problemas no dia a dia das creches e jardins de infância</div>
+            </div>
+            <div class="[ row ]">
+                {% for issue in site.data.issues %}
+                <div class="[ col-xl-3 ]">
+                    <div class="issue">
+                        <div class="[ mb-2 ] issue-illustration">
+                            <img src="/assets/img/{{ issue.illustration }}" alt="{{ issue.title }}">
+                        </div>
+                        <h4 class="[  ] issue-title">{{ issue.title }}</h4>
+                        <div class="[  ] issue-description">{{ issue.description }}</div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <section class="[ container-xl py-5 _my-5 ] section-functionalities">
+        <div id="funcionalidades" class="section-anchor"></div>
+        <div class="[ mb-5 ] section-header">
+            <h2 class="[  ] section-title">Funcionalidades</h2>
+            <div class="[ text-center ] pitch">Vamos lá então ver o que a Gamboozeeno tem para oferecer</div>
+        </div>
+        {% for feature in site.data.features %}
+        <div class="[ row my-5 ] feature">
+            <div class="[ col-xl-5 ]">
+                <div class=" text">
+                    <h3 class="[ _mb-0 ]">{{ feature.title }}</h3>
+                    <div>{{ feature.description }}</div>
+                </div>
+            </div>
+            <div class="[ col-xl-7 ]">
+                <div class="mockup">
+                    <div class="[  ] mobile">
+                        <img src="{{ feature.mobileImage }}" alt="{{ feature.title }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+    <section class="[ py-5 my-5 ] section-pricing">
+        <div id="planos" class="section-anchor"></div>
+        <div class="[ container-xl ]">
+            <div class="[ mb-5 text-center ] section-header">
+                <h2 class="[  ] section-title">Planos</h2>
+                <div class="pitch">Sabemos que nenhuma escola é igual e por isso todos os nossos planos têm por base <strong>1 EUR por criança</strong></div>
+            </div>
+            <div class="[ my-5 text-center ] slideroo">
+                <div class="[ row ]">
+                    <div class="[ col-xl-3 ]">
+                        <div class="[ text-right ]">A minha escola tem</div>
+                    </div>
+                    <div class="[ col-xl-6 ]">
+                        <div class="children-counter-ctn">
+                            <input type="range" min="5" max="300" value="40" step="1" class="slider" id="children-counter-slider">
+                            <div class="[ text-center ] children-counter" id="children-counter"></div>
+                        </div>
+                    </div>
+                    <div class="[ col-xl-3 ]">
+                        <div class="[ text-left ]">crianças maravilhosas</div>
+                    </div>
+                </div>
+            </div>
+            <div class="[ row ]">
+                <div class="[ col-xl-4 ]">
+                    <div class="[ p-4 ] plan">
+                        <h6 class="[ mb-0 ] plan-title">Basic</h6>
+                        <div class="[  ] plan-cost">
+                            <span id="plan-price-basic" class="[  ] plan-price">45</span>
+                            <span class="[  ] plan-currency">EUR</span>
+                            <span class="[  ] plan-periodicity">/ mês</span>
+                        </div>
+                        <div class="[  ] plan-children">
+                            <span>para</span>
+                            <span class="current-children-counter">45</span>
+                            <span>crianças</span>
+                        </div>
+                        <ul class="[ my-4 ] plan-features">
+                            <li>Registo de actividades da criança</li>
+                            <li>Mural privado da criança</li>
+                            <li>Mural partilhado da sala</li>
+                            <li>Relatórios de avaliação periódica</li>
+                            <li>Gestão de recados</li>
+                            <li>Gestão de ementa</li>
+                            <li class="[  ] feature-unavailable">Website da escola integrado</li>
+                            <li class="[  ] feature-unavailable">Pagamentos digitais</li>
+                            <li class="[  ] feature-unavailable">Faturação automática</li>
+                        </ul>
+                        <a class="[ btn ]">
+                            <span>Experimente grátis até Jan 2022</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="[ col-xl-4 ]">
+                    <div class="[ p-4 ] plan main-plan">
+                        <h6 class="[ mb-0 ] plan-title">Ninja</h6>
+                        <div class="[  ] plan-cost">
+                            <span id="plan-price-ninja" class="[  ] plan-price">55</span>
+                            <span class="[  ] plan-currency">EUR</span>
+                            <span class="[  ] plan-periodicity">/ mês</span>
+                        </div>
+                        <div class="[  ] plan-children">
+                            <span>para</span>
+                            <span class="current-children-counter">45</span>
+                            <span>crianças</span>
+                        </div>
+                        <ul class="[ my-4 ] plan-features">
+                            <li>Registo de actividades da criança</li>
+                            <li>Mural privado da criança</li>
+                            <li>Mural partilhado da sala</li>
+                            <li>Relatórios de avaliação periódica</li>
+                            <li>Gestão de recados</li>
+                            <li>Gestão de ementa</li>
+                            <li class="[  ] feature-new">Website da escola integrado</li>
+                            <li class="[  ] feature-unavailable">Pagamentos digitais</li>
+                            <li class="[  ] feature-unavailable">Faturação automática</li>
+                        </ul>
+                        <a class="[ btn ]">
+                            <span>Experimente grátis até Jan 2022</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="[ col-xl-4 ]">
+                    <div class="[ p-4 ] plan">
+                        <h6 class="[ mb-0 ] plan-title">Pro</h6>
+                        <div class="[  ] plan-cost">
+                            <span id="plan-price-pro" class="[  ] plan-price">105</span>
+                            <span class="[  ] plan-currency">EUR</span>
+                            <span class="[  ] plan-periodicity">/ mês</span>
+                        </div>
+                        <div class="[  ] plan-children">
+                            <span>para</span>
+                            <span class="current-children-counter">45</span>
+                            <span>crianças</span>
+                        </div>
+                        <ul class="[ my-4 ] plan-features">
+                            <li>Registo de actividades da criança</li>
+                            <li>Mural privado da criança</li>
+                            <li>Mural partilhado da sala</li>
+                            <li>Relatórios de avaliação periódica</li>
+                            <li>Gestão de recados</li>
+                            <li>Gestão de ementa</li>
+                            <li class="[  ] feature-new">Website da escola integrado</li>
+                            <li class="[  ] feature-new">Pagamentos digitais</li>
+                            <li class="[  ] feature-new">Faturação automática</li>
+                        </ul>
+                        <a class="[ btn ]">
+                            <span>Experimente grátis até Jan 2022</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="[ py-5 my-5 ] section-team">
+        <div id="equipa" class="section-anchor"></div>
+        <div class="[ container-xl text-center ]">
+            <div class="[ mb-5 text-center ] section-header">
+                <h2 class="[  ] section-title">Equipa</h2>
+                <div class="pitch">Euglena is a genus of single cell flagellate eukaryotes. It is the best known and most widely studied member of the class Euglenoidea, a diverse group containing some 54 genera and at least 800 species.</div>
+            </div>
+            <div class="team-member-list">
+                <div class="[ row ]">
+                    {% for teamMember in site.data.team %}
+                    <div class="[ col-xl-3 ]">
+                        <div class="[ text-center ] team-member">
+                            <div class="[ mb-3 ] team-member-photo">
+                                <img src="{{ teamMember.photo }}" alt="{{ teamMember.name }}">
+                            </div>
+                            <h6 class="[ mb-0 ] team-member-name">{{ teamMember.name }}</h6>
+                            <div class="team-member-role">{{ teamMember.role }}</div>
+                            <div class="team-member-kids">{{ teamMember.kids }}</div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="[ pt-5 mt-5 ] section-footer">
+                <a href="mailto:hello@gamboozeeno.com" class="contact">hello@gamboozeeno.com</a>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript" src="/assets/js/pricing.js"></script>
+    <script type="text/javascript" src="/assets/js/image-shover.js"></script>
+</div>
