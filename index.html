@@ -13,42 +13,14 @@ id: homepage
     </section>
     <section class="[ container-xl _my-5 ] section-major-functionalities">
         <div class="[ row ]">
+            {% for feature in site.data.main-features %}
             <div class="[ col-xl-6 mb-5 ]">
                 <div class="major-functionality">
-                    <h3 class="[  ] title">Uma ferramenta<br>de comunicação</h3>
-                    <div class="[ mb-2 ] text">Claro que o WhatsApp é prático mas pode ser caótico. E o direito à <strong>privacidade</strong> das crianças é fundamental. Crie linhas de comunicação que estão sob o controlo de cada um dos pais e poupam tempo a todos.</div>
-                    {% comment %}
-                    <button class="[ btn btn-primary ]">Conheça os murais</button>
-                    {% endcomment %}
+                    <h3 class="[  ] title">{{ feature.title }}</h3>
+                    <div class="[ mb-2 ] text">{{ feature.description }}</div>
                 </div>
             </div>
-            <div class="[ col-xl-6 mb-5 ]">
-                <div class="major-functionality">
-                    <h3 class="[  ] title">Recados, registos<br>e avaliações</h3>
-                    <div class="[ mb-2 ] text">E quando tem de marcar uma actividade fora da creche? Pff... sabemos bem como é. Felizmente temos integradas as autorizações dos pais e pagamentos extra. E tantas cosias mais!</div>
-                    {% comment %}
-                    <button class="[ btn btn-primary ]">Veja exemplos</button>
-                    {% endcomment %}
-                </div>
-            </div>
-            <div class="[ col-xl-6 mb-5 ]">
-                <div class="major-functionality">
-                    <h3 class="[  ] title">Faturação automática 100% integrada</h3>
-                    <div class="[ mb-2 ] text">Sabe aquelas horas infindáveis a consultar a conta bancária e a emitir faturas? Esqueça. Connosco tem tudo <strong>automatizado</strong>, até aqueles custos pontuais chatíssimos.</div>
-                    {% comment %}
-                    <button class="[ btn btn-primary ]">Saiba como</button>
-                    {% endcomment %}
-                </div>
-            </div>
-            <div class="[ col-xl-6 mb-5 ]">
-                <div class="major-functionality">
-                    <h3 class="[  ] title">Microsite<br>da escola</h3>
-                    <div class="[ mb-2 ] text">Manter o seu site atualizado é sempre um pincel, verdade? Conquiste os pais num site onde cria laços entre potenciais clientes e a sua equipa.</div>
-                    {% comment %}
-                    <button class="[ btn btn-primary ]">Tantas funcionalidades</button>
-                    {% endcomment %}
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </section>
     <section class="[ _py-5 _my-5 ] section-issues">
